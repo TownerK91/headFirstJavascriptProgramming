@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+	
+var scores = [1, 2, 20, 20, 5];
+var highScore = 0;
+var output;
+for (var i = 0; i < scores.length; i++) {
+    output = "bubble solution # " + i + " score: " + scores[i];
+    console.log(output);
+    if (scores[i] > highScore) {
+        highScore = scores[i];
+    }
+}
+console.log("bubbles tests: " + scores.length);
+console.log("highest bubble score: " + highScore);
+
+var bestSolutions = [];
+for (var i = 0; i < scores.length; i++) {
+    if (scores[i] == highScore) {
+        bestSolutions.push(i);
+    }
+}
+console.log("solutions with the highest score: " + bestSolutions);
+</script>
