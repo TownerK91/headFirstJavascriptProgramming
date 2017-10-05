@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors Pseudocode</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+</head>
+<!--STYLESHEET-************************************************-->
+<style>
+#header {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    width: 100%;
+    background-size: cover;
+    border: white solid;
+    border-radius: 40px;
+    text-align: center;
+}
+
+#footer {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 12px;
+    width: 100%;
+    background-size: cover;
+    border: white solid;
+    border-radius: 40px;
+}
+
+#scoretable {
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    background-size: cover;
+    border: white solid;
+    border-radius: 40px;
+}
+
+body {
+    background-color: #90EE90;
+}
+
+.text-white {
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 80px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+</style>
+<!--STYLESHEET-************************************************-->
+
+<body>
+        <!--the Jumbotron Head-****************-->
+        <div class="jumbotron bg-inverse text-white" id="header">
+            <p class="ml-5">Rock Paper Scizzor</p>
+        </div>
+        <!--the Jumbotron Head-****************-->
+     <div class="container">
+        <div class="row">
+            <div class="col-md-3 bg-inverse text-white text-center mb-4" id="userguess">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4 jumbotron bg-inverse text-white" id="scoretable">
+                <ul>
+                    <!--winfield=class and wintext=ID-->
+                    <li>
+                        <div class="winfield">Wins: </div>
+                        <span div id="wintext"></span></li>
+                    <!--lossfield=class and losstext=ID-->
+                    <li>
+                        <div class="losefield">Losses: </div>
+                        <span div id="losstext"></span></li>
+                    <!--tiefield=class and tietext=ID-->
+                    <li>
+                        <div class="tiefield">Tie: </div>
+                        <span div id="tietext"></span></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 bg-inverse text-white text-center mb-4" id="computerguess">
+            </div>
+        </div>
+       
+    </div>
+    <div class="col-md-4"></div>
+    <div class="row">
+        <div class="jumbotron bg-inverse text-white" id="footer">© 2017 Kevin Towner All Rights Reserved</div>
+    </div>
+</body>
+<!--JUMBOTRON SCORECARD-*****************-->
+</body>
+<script type="text/javascript">
+// Let's start by grabbing a reference to the <span> below.
+var userGuess = document.getElementById("userguess");
+var computerGuess = document.getElementById("computerguess");
+var winText = document.getElementById("wintext");
+var lossText = document.getElementById("losstext");
+var tieText = document.getElementById("tietext");
+var computerChoices = ["r", "p", "s"];
+var Tie = 0;
+var Win = 0;
+var Lost = 0;
+
+
+// Next, we give JavaScript a function to execute when onkeyup event fires.
+
+document.onkeyup = function(event) {
+    userGuess.textContent = event.key;
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    computerguess.textContent = computerGuess;
+    if (event.key === "r" || event.key === "p" || event.key === "s") {
+        if (event.key === "r" && computerGuess === "r") {
+            Tie++;
+        } else if (event.key === "r" && computerGuess === "p") {
+            Lost++;
+        } else if (event.key === "r" && computerGuess === "s") {
+            Win++;
+        } else if (event.key === "p" && computerGuess === "r") {
+            Win++;
+        } else if (event.key === "p" && computerGuess === "p") {
+            Tie++;
+        } else if (event.key === "p" && computerGuess === "s") {
+            Lost++;
+        } else if (event.key === "s" && computerGuess === "r") {
+            Lost++;
+        } else if (event.key === "s" && computerGuess === "p") {
+            Win++;
+        } else if (event.key === "s" && computerGuess === "s") {
+            Tie++;
+        }
+
+    } else {
+        alert("Please enter r, p ,s!");
+    }
+    winText.textContent = Win;
+    lossText.textContent = Lost;
+    tieText.textContent = Tie;
+};
+
+</script>
+<!--#userguess {
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
+    height: 100%;
+    border: line;
+    border-color: white;
+    border-width: 2px;
+}
+#computerguess {
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
+    height: 100%;
+}-->
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PASSING OBJECTS TO FUNCTIONS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body>
+</body>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type ="text/javascript">
+
+//variable dog is now an object 	
+	var dog = {
+		name:"molly",
+		color: "brown",
+		weight: 50
+	};
+
+//calling the function declared below
+loseWeight(dog); // the function is called and passing through the dog object
+
+
+//function altering the object, in this case we are making Molly loose 10 pounds
+	function loseWeight(dog){ //the dog object is the parameter for this functuion
+		dog.weight = dog.weight - 10;
+	}
+
+
+//an alert proving that the function loseWeight did it's job and altered the object, Dog.
+	alert(dog.name + " now weighs "+ dog.weight);
+
+		
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>
