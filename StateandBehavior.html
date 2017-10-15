@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Do you know how this works?</title>
+    <meta charset="utf-8">
+</head>
+<script type="text/javascript">
+
+    //an object, FIAT, and multiple methods inside the object.
+var SUV = {
+    make: "ford",
+    model: "explorer",
+    started: false,
+    fuel: 0,
+    start: function(){
+        if(this.fuel < 1){
+            alert("you need gas");
+        }else(this.fuel > 0){
+            alert("vroom vroom");
+        }   
+    },
+    stop: function(){
+        this.started = false;
+
+    },
+    drive: function(){
+        if (this.started){
+
+        if (this.fuel){
+            alert(this.make + " " + this.model + " goes zoom zoom!"); 
+            this.fuel = this.fuel - 1;
+            }else{
+                alert("oh shit");
+                this.stop();
+            } 
+        }else{
+            alert("you need to start the engine first!");
+            this.stop();
+        }
+    },
+    addFuel: function(amount){
+        this.fuel = this.fuel + amount;
+    }
+
+};
+SUV.start();
+SUV.addFuel(1);
+SUV.start();
+SUV.drive();
+
+
+
+
+
+
+
+
+</script>
+
+</html>

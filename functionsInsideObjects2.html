@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Train</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Stalinist+One" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<body>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+//FOR PART 2 OF THIS GOES OVER STATES AND BEHAVIOR
+	var fiat={
+		make: "fiat",
+		model: "500",
+		year: 1957,
+		color: "medium blue",
+		passengers: 2,
+		convertible: false,
+		mileage: 88000,
+		started: false,
+		fuel: 0,
+		start: function(){
+			//IF we were to  take out the "this" run this code and look in theconsole. The computer would tell you that "started" is undefined. THIS tells the computer that started is INSIDE THIS object, and to not look globally for the variable 
+			this.started=true; 
+		},
+		stop: function(){
+			//IF we were to  take out the "this" run this code and look in theconsole. The computer would tell you that "started" is undefined. THIS tells the computer that started is INSIDE THIS object, and to not look globally for the variable 
+			this.started=false; // 
+		},
+		drive: function(){
+			//IF we were to  take out the "this" run this code and look in theconsole. The computer would tell you that "started" is undefined. THIS tells the computer that started is INSIDE THIS object, and to not look globally for the variable 
+			if(this.started){ //
+				alert("VROOM");
+			}else{
+			alert("start the engine, dummy");
+		
+			}
+
+		},
+
+	};
+	fiat.drive();
+	fiat.start();
+	fiat.drive();
+	fiat.stop();
+
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+
+
+1st call Geocode to get the lattitude and longitude 
+
+
+2nd call 
+
+
+rxNav --> API which we are pulling our medications from 
+	2 calls:
+		> (medName) grabs the ID number for the which all fall under a unique ID
+			response 
+
+		> (medID) second takes the med ID and is responsible for looking at the interactions between the two meds. 
+
+	libraries: 
+		google places
+
+		defiantJs
+
+	firebase auth ui
+
+
+
+
+
+
+
+

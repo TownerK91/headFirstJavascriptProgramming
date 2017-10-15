@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Do you know how this works?</title>
+    <meta charset="utf-8">
+</head>
+<script type="text/javascript">
+var balance = 10500;
+var cameraOn = true;
+
+
+
+function steal(balance, amount){
+    cameraOn = false;
+    if (amount < balance){ 
+        balance = balance - amount; //10500 - 1250 = 9250
+    }
+    return amount; //9250
+    cameraOn = true; //camera goes back on
+}
+
+var amount = steal(balance, 1250);
+alert("Criminal: you stole " + amount + " !");
+</script>
+
+</html>

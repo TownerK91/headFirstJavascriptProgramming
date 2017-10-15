@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>typeof</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Stalinist+One" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script type="text/javascript">
+//In javascript, to test what kind of variable somethign is.  You can use it to probe the type of its operand( the thign you use it to operate on)
+
+var test1 = "string";
+var test2 = 2;
+var test3 = true;
+var test4 = {};
+var test5 = [];
+var test6;
+var test7 = {"test": 2};
+var test8 = ["test", 2];
+function test9(){
+	return "test"
+};
+var test10 = null;
+
+//here we are using the typof operator which is built into javascript. We've declared a bunch of variables and below we do console.logs for each variable. In the console, we will see every variable's type.
+
+function testTheTypeofs(){    //in the console:....
+
+	console.log(typeof test1); //string
+	console.log(typeof test2); //number
+	console.log(typeof test3); //boolean
+	console.log(typeof test4); //object
+	console.log(typeof test5); //object
+	console.log(typeof test6); //undefined
+	console.log(typeof test7); //object
+	console.log(typeof test8); //object
+	console.log(typeof test9); //function
+	console.log(typeof test10);//
+
+}
+
+testTheTypeofs();
+
+
+
+</script>
+
+
+</html>

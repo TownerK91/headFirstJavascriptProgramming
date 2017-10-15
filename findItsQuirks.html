@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Do you know how this works?</title>
+    <meta charset="utf-8">
+</head>
+<script type="text/javascript">
+//funtion called clunk with *times* as a parameter
+function clunk(times) {
+//declaring what the parameter is, which is a number.
+    var num = times;
+//as long as the number is less than 0....
+    while (num > 0) {
+//"clunk" will be displayed...
+        display("clunk");
+//and the parameter of times,(in this function num), will be descreased by one.
+        num = num - 1;
+    }//end of while loop
+}//end of function clunk().
+
+
+//function called thingamajig called with *size* as a parameter
+function thingamajig(size) {
+// local variable named facky which equals 1
+    var facky = 1;
+//clunkCounter equal to 0
+    clunkCounter = 0;
+//if size is 0 ...
+    if (size == 0) {
+//display clank
+        display("clank");
+//if size is 1
+    } else if (size == 1) {
+//display thunk
+        display("thunk");
+//if size IS NOT 0 or 1
+    } else {
+        while (size > 1) {
+// facky is now facky times(*) the size number(which is definately greater than 1) 
+            facky = facky * size;
+//the size number will also decrease by 1 until the size is =- (equal to or less than 1)
+            size = size - 1;
+        }
+//function clunk() (which was created at the top) is being called within the thingamajig function with facky passing through it as a parameter.
+        clunk(facky);
+    }
+}
+
+function display(output) {
+    console.log(output);
+    clunkCounter = clunkCounter + 1;
+}
+clunkCounter = 0; //global variable
+thingamajig(5);	 //calling function thingamajig with the size running through it
+console.log(clunkCounter);
+</script>
+
+</html>
