@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Truth and Falsery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Stalinist+One" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    
+
+</head>
+<body>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script type="text/javascript">
+//
+var testThis;
+
+if(testThis){
+	alert("test this!");
+}
+else{
+	alert("nope");
+}
+
+
+
+//below we are making a lie detector test, each time a falsery is called upon the variable lies will increase by 1..
+function lieDetectorTest(){
+
+	var lies = 0;
+	var stolenDiamond = {};
+
+
+	if (stolenDiamond){
+		console.log("you stole the diamond");
+		lies++;
+	}
+
+	var car = {
+		keysInPocket: null
+	};
+
+	if (car.keysInPocket){
+		console.log("uh oh, guess you stole the car");
+		lies++;
+	}
+
+	var foundYouAtCrimeScene = [];
+
+	if (foundYouAtCrimeScene){
+		console.log("we found you");
+		lies++;
+	}
+
+	var yourName = " ";
+
+	if(yourName){
+		console.log("lied about your name?");
+		lies++;
+	}
+
+return lies;
+
+}
+var numberOfLies = lieDetectorTest();
+console.log("you told "+ numberOfLies+ " lies!");
+if (numberOfLies >= 3){
+	console.log("Guilty!!!");
+}
+
+</script>
+
+
+</html>
